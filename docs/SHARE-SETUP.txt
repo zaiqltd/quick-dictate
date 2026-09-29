@@ -1,0 +1,11 @@
+Quick Dictate — setup on your Mac
+
+Requires macOS 14 or newer, an Apple Silicon or Intel Mac, internet access, and your own OpenRouter API key: https://openrouter.ai/settings/keys
+
+1. Unzip the package and drag Quick Dictate.app into Applications.
+2. Open Quick Dictate from Applications. This personal build is not notarized by Apple. If macOS blocks its first launch, try opening it once, then go to System Settings → Privacy & Security → Open Anyway if you trust the copy you received. Apple's instructions: https://support.apple.com/102445
+3. In Quick Dictate, open Settings, paste your own OpenRouter key, and click Save key. The package contains no key. The app saves yours in your Mac's Keychain.
+4. Allow Microphone access. For the global shortcut and automatic paste, also allow Quick Dictate under System Settings → Privacy & Security → Accessibility.
+5. Click a text field, hold Option + Command, speak, then release. Enable Polish, Ask, Do, or Full Control individually in Settings if you want them.
+
+Closing the window leaves Quick Dictate running in the Dock and menu bar; Quick Dictate → Quit Quick Dictate exits it. Full Control is off initially and needs your own installed, signed-in Codex CLI if enabled. It can run commands without approval, so turn it on only if that is what you want.

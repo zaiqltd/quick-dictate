@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleName</key><string>Quick Dictate</string>
+<key>CFBundleDisplayName</key><string>Quick Dictate</string>
+<key>CFBundleIdentifier</key><string>local.chad.quick-dictate</string>
+<key>CFBundleExecutable</key><string>QuickDictate</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+    <key>CFBundleShortVersionString</key><string>4.1.5</string>
+    <key>CFBundleVersion</key><string>12</string>
+<key>LSMinimumSystemVersion</key><string>14.0</string>
+<key>NSMicrophoneUsageDescription</key><string>Quick Dictate records your voice only when you start dictation, then sends it to OpenRouter to turn it into text.</string>
+<key>NSHighResolutionCapable</key><true/>
+<key>CFBundleIconFile</key><string>AppIcon</string>
+</dict></plist>
