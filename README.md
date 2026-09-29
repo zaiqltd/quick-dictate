@@ -21,6 +21,8 @@ You need macOS 14 or newer (Apple Silicon or Intel), Apple's command line tools 
 
 To change the code, edit the files in `Sources/` and run `./scripts/install.sh` again (quit the app first). `AGENTS.md` is the design brief for coding agents and describes how each mode must behave. `./scripts/build.sh` builds without installing; `./scripts/package.sh` makes a shareable universal ZIP in Downloads.
 
+For demos and testing, `open --env QUICK_DICTATE_DEMO_AUDIO=/path/to/clip.wav -a "Quick Dictate"` makes dictation use that WAV file (16 kHz, mono, 16-bit) instead of the microphone; transcription and paste run as normal.
+
 Full Control is off by default. It needs your own signed-in Codex CLI and can run commands on your Mac without asking, so only turn it on if that is what you want.
 
 ## First use

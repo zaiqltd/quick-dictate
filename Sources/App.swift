@@ -115,10 +115,17 @@ enum DictionarySheet: String, Identifiable { case correction, words; var id: Str
          polisher: (any TextPolishing)? = nil,
          services: DictationServices? = nil, dictionary: PersonalDictionary? = nil,
          features: FeatureSettings? = nil, agent: AgentSession? = nil) {
-        self.recorder = recorder ?? Recorder()
+        // QUICK_DICTATE_DEMO_AUDIO (filming and testing) swaps the microphone for a WAV file; unset, nothing changes.
+        let demo = recorder == nil ? DemoAudio.recorder() : nil
+        self.recorder = recorder ?? demo ?? Recorder()
         self.client = client ?? TranscriptionClient()
         self.polisher = polisher ?? PolishClient()
-        self.services = services ?? .live
+        var resolvedServices = services ?? .live
+        if demo != nil {
+            resolvedServices.microphoneStatus = { .authorized }
+            resolvedServices.requestMicrophone = { completion in completion(true) }
+        }
+        self.services = resolvedServices
         self.dictionary = dictionary ?? PersonalDictionary()
         let settings = features ?? FeatureSettings()
         self.features = settings

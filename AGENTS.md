@@ -75,6 +75,7 @@ If `AGENTS.local.md` exists (it is git-ignored), read it too. It holds the local
 - `./scripts/build.sh` builds for the host CPU.
 - `./scripts/install.sh` installs to `/Applications`, keeping the previous app rather than deleting it.
 - `./scripts/package.sh` makes a universal Apple Silicon/Intel ZIP in Downloads containing only the app and `START HERE.txt`.
+- Demo input for filming and testing: launching with `QUICK_DICTATE_DEMO_AUDIO=/path/to/clip.wav` (16 kHz, mono, 16-bit PCM) makes dictation use that file instead of the microphone. The meter follows the file and the file is what gets transcribed; everything after recording is the normal path. Unset, nothing changes.
 - Record only checks actually completed. Event tests do not prove physical shortcut behaviour, and model listings do not prove live API success.
 
 Background research lives in [docs/CODEX-INTEGRATION.md](docs/CODEX-INTEGRATION.md), [docs/VOICE-RESEARCH.md](docs/VOICE-RESEARCH.md) and [docs/AGENT-RESEARCH.md](docs/AGENT-RESEARCH.md).

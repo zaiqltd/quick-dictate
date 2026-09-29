@@ -131,6 +131,7 @@ final class MockProtocol: URLProtocol {
         try await requestProgressChecks()
         try await codexCLIChecks()
         try await fullControlSessionChecks()
+        try demoAudioChecks()
         print("PASS: \(checks) checks — dictation and agent controllers, recording, paste, dictionary, shortcuts, API contracts, reviewed actions and cancellation.")
     }
 }
